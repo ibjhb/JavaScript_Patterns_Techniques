@@ -55,10 +55,9 @@
                 </section>
 
                 <section>
-                    <h1>Model-View-Controller</h1>
-                </section>
-
-                <section>
+                    <section>
+                        <h1>Model-View-Controller</h1>
+                    </section>
                     <section>
                         <h3>The Problem?</h3>
                         <p>How do you modularize the user interface functionality of a Web application so that you can easily modify the individual parts?</p>
@@ -70,8 +69,13 @@
                         <img src="/assets/img/surface.png">
                     </section>
                     <section>
+                        <h3>People have different skills!</h3>
+                        <img src="/assets/img/GD_V_P.png">
+                    </section>
+                    <section>
                         <h3>A Solution?</h3>
-                        <p>Seperate the modeling of the domain, presentation and actions into three seperate classes!</p>
+                        <p><blockquote>Separate the modeling of the domain, presentation and actions into three separate classes.</blockquote> - Microsoft</p>
+                        <p class="fragment"><br><br>Yeah... what they said!</p>
                     </section>
                     <section>
                         <img src="/assets/img/mvc.png">
@@ -96,6 +100,7 @@
                                 <li class="fragment">A visual representation of knowledge.</li>
                                 <li class="fragment">Manages the display of information.</li>
                                 <li class="fragment">Highly customized for an implementation.</li>
+                                <li class="fragment">Can have it's own knowledge (private) to manage itself.</li>
                             </ul>
                         </p>
                     </section>
@@ -118,23 +123,19 @@
                         <p class="fragment">Come on! Write this one down!</p>
                     </section>
                     <section>
-                        <p>Concrete Example</p>
-                        <img src="/assets/img/mario-white.jpg">
-                    </section>
-                    <section>
                         <p>We all love Mario... but what is Mario?</p>
                         <img src="/assets/img/mario-only.jpg">
                     </section>
                     <section>
-                        <p>He is a View!</p>
+                        <p>Is he a View?</p>
                         <img src="/assets/img/mario-only-a.jpg">
                     </section>
                     <section>
-                        <p>Or, is he really a Model?</p>
+                        <p>Or, is he a Model?</p>
                         <img src="/assets/img/mario-only-b.jpg">
                     </section>
                     <section>
-                        <p>Mario is both a view and a model!</p>
+                        <p>Mario can be a view and a model!</p>
                         <img src="/assets/img/mario-only-c.jpg">
                     </section>
                     <section>
@@ -142,16 +143,86 @@
                         <img src="/assets/img/mario-only-d.jpg">
                     </section>
                     <section>
-                        <p>And, MVC starts to become a &quot;pattern&quot;.</p>
+                        <p>Are you starting to see the MVC &quot;pattern&quot;?</p>
                         <img src="/assets/img/mario-all.jpg">
                     </section>
+                    <section>
+                        <h3>But, things evolve!</h3>
+                        <img src="/assets/img/mvc.png">
+                    </section>
+                    <section>
+                        <h3>Introducing Model-View-ViewModel (MVVM)</h3>
+                        <img src="/assets/img/MVVM-b.png">
+                    </section>
+                    <section>
+                        <img src="/assets/img/MVVM-h.png">
+                        <p class="fragment">
+                            <ul>
+                                <li class="fragment">Hybrid that blends the Controller and View.</li>
+                                <li class="fragment">Helps reduce &quot;Code Sprawl&quot; and improve legibility.</li>
+                                <li class="fragment">Perfect choice for JavaScript applications.</li>
+                                <li class="fragment">MVC + MVVM = OK!</li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Where does MVVM make sense?</h3>
+                        <img src="/assets/img/GITHUB.jpg" class="fragment">
+                    </section>
+                    <section>
+                        <h3>Breaking GitHub down into views...</h3>
+                        <img src="/assets/img/GITHUB-A.jpg">
+                    </section>
+                    <section>
+                        <h3>Breaking GitHub down into views...</h3>
+                        <img src="/assets/img/GITHUB-B.jpg">
+                    </section>
+                    <section>
+                        <h3>Backbone.js Uses the ViewModel Pattern!</h3>
+                        <pre><code contenteditable="true">(function($){
+    var ListView = Backbone.View.extend({
+        el: $('body')
+        // `events`: Where DOM events are bound to View methods. Backbone doesn't have a
+        // separate controller to handle such bindings; it all happens in a View.
+        ,events: {
+            'click button#add': 'addItem'
+        }
+        ,initialize: function() {
+            _.bindAll(this, 'render', 'addItem');
+            this.counter = 0;
+            this.render();
+        }
+        // `render()` now introduces a button to add a new list item.
+        ,render: function() {
+            $(this.el).append("&lt;button id='add'&gt;Add list item&lt;/button&gt;");
+            $(this.el).append("&lt;ul&gt;&lt;/ul&gt;");
+        }
+        // `addItem()`: Custom function called via `click` event above.
+        ,addItem: function() {
+            this.counter++;
+            $('ul', this.el).append("&lt;li&gt;hello world"+this.counter+"&lt;/li&gt;");
+        }
+    });
+
+    var listView = new ListView();
+    })(jQuery);</code></pre>
+                    </section>
+                    <section>
+                        <h3>Are you starting to see the MVVM pattern?</h3>
+                        <img src="/assets/img/GITHUB-B.jpg">
+                    </section>
+
                     <!---
                     <img src="/assets/img/browsers.jpg">
                     <img src="/assets/img/spreadsheet.jpg">
                     <img src="/assets/img/treevciew.jpg">
                     --->
-                    <
                 </section>
+
+                <section>
+                    <h1>Application State</h1>
+                </section>
+
 
 				<section>
 					<h1>THE END</h1>
