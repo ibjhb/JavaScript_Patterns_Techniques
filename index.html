@@ -1,0 +1,228 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Central Florida Web Developers User Group 7/17/2012</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Aaron Greenlee and James Brown">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section>
+                    <h1>JavaScript Series</h1>
+                    <h3 class="inverted">Patterns and Techniques of Modern Web Applications</h3>
+                    <img src="/assets/img/cfwfug.jpeg">
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+
+                <section>
+                    <h2>What is this event all about?</h2>
+                    <p class="fragment">
+                        <ol>
+                            <li class="fragment">Model-View-Controller (MVC) 101</li>
+                            <li class="fragment">The evolution of the ViewModel (MVVM)</li>
+                            <li class="fragment">Publish/Subscribe Pattern</li>
+                            <li class="fragment">Templating</li>
+                            <li class="fragment">Understanding Application State</li>
+                            <li class="fragment">Test Driven Development</li>
+                        </ol>
+                    </p>
+                </section>
+
+                <section>
+                    <h1>Model-View-Controller</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>The Problem?</h3>
+                        <p>How do you modularize the user interface functionality of a Web application so that you can easily modify the individual parts?</p>
+                    </section>
+                    <section>
+                        <h3>The same data needs to be shown in different ways!</h3>
+                        <img src="/assets/img/250px-Iphone_4G-3_black_screen.png">
+                        <img src="/assets/img/desktop.png">
+                        <img src="/assets/img/surface.png">
+                    </section>
+                    <section>
+                        <h3>A Solution?</h3>
+                        <p>Seperate the modeling of the domain, presentation and actions into three seperate classes!</p>
+                    </section>
+                    <section>
+                        <img src="/assets/img/mvc.png">
+                    </section>
+                    <section>
+                        <h3>What is a Model?</h3>
+                        <img src="/assets/img/model.png">
+                        <p class="fragment">
+                            <ul>
+                                <li class="fragment">Represents knowledge.</li>
+                                <li class="fragment">A modeling of something from the real-world.</li>
+                                <li class="fragment">Can be simple or complex.</li>
+                                <li class="fragment">Can have knowledge of other models.</li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>What is a View?</h3>
+                        <img src="/assets/img/view.png">
+                        <p class="fragment">
+                            <ul>
+                                <li class="fragment">A visual representation of knowledge.</li>
+                                <li class="fragment">Manages the display of information.</li>
+                                <li class="fragment">Highly customized for an implementation.</li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>What is a Controller?</h3>
+                        <img src="/assets/img/controller.png">
+                        <p class="fragment">
+                            <ul>
+                                <li class="fragment">Manages inputs and communicates to Models and/or Views.</li>
+                                <li class="fragment">Links a User to the system.</li>
+                                <li class="fragment">Links other systems to the system.</li>
+                                <li class="fragment">Manages workflow.</li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>A Tip When Coding</h3>
+                        <p>Code Size Guideline</p>
+                        <img src="/assets/img/moreless.png">
+                        <p class="fragment">Come on! Write this one down!</p>
+                    </section>
+                    <section>
+                        <p>Concrete Example</p>
+                        <img src="/assets/img/mario-white.jpg">
+                    </section>
+                    <section>
+                        <p>We all love Mario... but what is Mario?</p>
+                        <img src="/assets/img/mario-only.jpg">
+                    </section>
+                    <section>
+                        <p>He is a View!</p>
+                        <img src="/assets/img/mario-only-a.jpg">
+                    </section>
+                    <section>
+                        <p>Or, is he really a Model?</p>
+                        <img src="/assets/img/mario-only-b.jpg">
+                    </section>
+                    <section>
+                        <p>Mario is both a view and a model!</p>
+                        <img src="/assets/img/mario-only-c.jpg">
+                    </section>
+                    <section>
+                        <p>Powered by a Controller!</p>
+                        <img src="/assets/img/mario-only-d.jpg">
+                    </section>
+                    <section>
+                        <p>And, MVC starts to become a &quot;pattern&quot;.</p>
+                        <img src="/assets/img/mario-all.jpg">
+                    </section>
+                    <!---
+                    <img src="/assets/img/browsers.jpg">
+                    <img src="/assets/img/spreadsheet.jpg">
+                    <img src="/assets/img/treevciew.jpg">
+                    --->
+                    <
+                </section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3 class="inverted">BY<br>Aaron Greenlee (@aarongreenlee)<br>AND<br>James Brown (@ibjhb)</h3>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
