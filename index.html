@@ -34,6 +34,7 @@
                     <h1>JavaScript Series</h1>
                     <h3 class="inverted">Patterns and Techniques of Modern Web Applications</h3>
                     <img src="/assets/img/cfwfug.jpeg">
+                    <p>Presented July 17, 2012</p>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
@@ -42,10 +43,10 @@
 
                 <section>
                     <section>
-                        <h2>What is this event all about?</h2>
+                        <h2>What are we here to discuss?</h2>
                         <p class="fragment">
                             <ol>
-                                <li class="fragment">Model-View-Controller (MVC) 101</li>
+                                <li class="fragment">Model-View-Controller (MVC)</li>
                                 <li class="fragment">The evolution of the ViewModel (MVVM)</li>
                                 <li class="fragment">Publish/Subscribe Pattern</li>
                                 <li class="fragment">Templating</li>
@@ -298,7 +299,10 @@
                     </section>
                     <section>
                         <h2>Thiking About State</h2>
-                        <iframe width="640" height="360" src="http://www.youtube.com/embed/MVFrVIwc36Y" frameborder="0" allowfullscreen></iframe>
+                        <button id="vidToggle">Toggle Video</button>
+                        <div id="vidContainer" style="display: none;">
+                            <iframe width="640" height="360" src="http://www.youtube.com/embed/MVFrVIwc36Y" frameborder="0" allowfullscreen style="display: hidden;"></iframe>
+                        </div>
                     </section>
                 </section>
 
@@ -323,12 +327,16 @@
 		</div>
 
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-		<script src="lib/highlight.js"></script>
-		<script src="lib/classList.js"></script>
+        <script src="/js/jquery.js"></script>
+		<script src="/lib/highlight.js"></script>
+		<script src="/lib/classList.js"></script>
 		
-		<script src="js/reveal.js"></script>
+		<script src="/js/reveal.js"></script>
 		
 		<script>
+			// Toggle iFrame Container for YouTube Video
+            $('#vidToggle').click(function(){$('#vidContainer').toggle();});
+
 			// Parse the query string into a key/value object
 			var query = {};
 			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
