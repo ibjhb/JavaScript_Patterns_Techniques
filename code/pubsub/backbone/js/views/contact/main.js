@@ -7,6 +7,7 @@ define([
 	,'text!templates/contact/main.html'
 	,'text!templates/contact/basic.html'
 	,'text!templates/contact/green.html'
+	,'text!templates/contact/blue.html'
 
 ], function(
 	$
@@ -17,6 +18,7 @@ define([
 	,mainHomeTemplate
 	,basicTemplate
 	,greenTemplate
+	,blueTemplate
 	){
 
 	var view = Backbone.View.extend({
@@ -57,6 +59,14 @@ define([
 				,el : this.el.find('.green')
 				,attributes : {
 					template : greenTemplate
+				}
+			});
+
+			new subview({
+				model : this.model
+				,el : this.el.find('.blue')
+				,attributes : {
+					template : blueTemplate
 				}
 			});
 		}
