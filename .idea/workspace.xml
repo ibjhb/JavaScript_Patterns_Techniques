@@ -61,7 +61,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="68" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.8946259">
+            <state line="302" column="0" selection-start="14957" selection-end="14957" vertical-scroll-proportion="0.57850367">
               <folding />
             </state>
           </provider>
@@ -201,6 +201,11 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\web\cfwdug_js_b\assets\img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -463,7 +468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="68" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.8946259">
+        <state line="302" column="0" selection-start="14957" selection-end="14957" vertical-scroll-proportion="0.57850367">
           <folding />
         </state>
       </provider>
