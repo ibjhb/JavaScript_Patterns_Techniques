@@ -1,0 +1,21 @@
+.infoBox {
+	min-height: 200px;
+	border: 1px;
+	margin-bottom: 10px;
+}
+
+.red{
+	border: red solid 5px;
+}
+
+.green{
+	border: green solid 5px;
+}
+
+.blue{
+	border: blue solid 5px;
+}
+
+.yellow{
+	border: yellow solid 5px;
+}
