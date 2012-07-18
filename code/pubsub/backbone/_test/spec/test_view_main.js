@@ -1,8 +1,9 @@
 define(
 [
+	'jQuery',
     "views/contact/main"
 ],
-function (view) {
+function ($, view) {
     QUnit.specify.globalApi = true;
 	QUnit.specify("test.test", function(){
 		describe('test view.main functions', function(){
@@ -15,23 +16,29 @@ function (view) {
 			});
 
 			after(function(){
-
+				this.stub.restore();
 			})
 
 			it('should test saving a contact', function(){
 				SUT.model = {
 					set : sinon.stub()
 				};
+
 				SUT.saveContact();
 
 				assert(SUT.model.set.calledOnce).equals(true);
 				assert(stub.calledTwice).equals(true);
 				assert(stub.callCount).equals(2);  // Not necessary
 				assert(SUT.model.set.calledWith({ firstname : "james", lastname : "brown"})).equals(true);
-
 			});
 
+			it('test the age', function(){
+				SUT.testRender();
 
+				var x = $('#age').html();
+
+				assert(x).equals(50);
+			});
 		});
 	});
 

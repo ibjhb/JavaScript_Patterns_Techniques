@@ -7,11 +7,18 @@ define([
 		initialize: function(){
 			this.model.bind('change', this.render, this);
 			return this;
-		},
-		render: function(){
+		}
+		,events			: {
+			'click'	: 'showAlert'
+		}
+		,render: function(){
 			var compiledTemplate = _.template( this.attributes.template, this.model.toJSON() );
 			this.el.html( compiledTemplate );
 		}
+		,showAlert : function(){
+			alert(this.attributes.color);
+		}
+
 	});
 	return view;
 });

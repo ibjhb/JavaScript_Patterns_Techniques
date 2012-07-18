@@ -13,7 +13,7 @@ function (model) {
 			
 			after(function(){
 				this.stub.restore();
-			})
+			});
 
 			it('should test the  defaults', function(){
 				assert(SUT.get('firstname')).equals('');
@@ -23,7 +23,9 @@ function (model) {
 			it('should test the doSomething', function(){
 				SUT.doSomething();
 				assert(stub.calledOnce).equals(true);
+				assert(stub.callCount).equals(1);
 			});
+
 		});
 	});	 
     

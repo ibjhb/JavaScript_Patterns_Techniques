@@ -41,7 +41,9 @@ define([
 			}
 
 			this.model.set(data);
-
+		}
+		,testRender : function(){
+			$('#age').html(50);
 		}
 		,render		: function(){
 			this.el.html(mainHomeTemplate);
@@ -51,6 +53,7 @@ define([
 				,el : this.el.find('.red')
 				,attributes : {
 					template : basicTemplate
+					,color : 'red'
 				}
 			});
 
@@ -59,7 +62,9 @@ define([
 				,el : this.el.find('.green')
 				,attributes : {
 					template : greenTemplate
+					,color : 'green'
 				}
+
 			});
 
 			new subview({
@@ -67,6 +72,14 @@ define([
 				,el : this.el.find('.blue')
 				,attributes : {
 					template : blueTemplate
+				}
+			});
+
+			new subview({
+				model : this.model
+				,el : this.el.find('.yellow')
+				,attributes : {
+					template : 'Hi there!!  <%= firstname %>'
 				}
 			});
 		}
